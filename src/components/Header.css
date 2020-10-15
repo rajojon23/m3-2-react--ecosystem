@@ -1,0 +1,39 @@
+
+nav{
+	display: flex;	
+	flex-direction: row;
+	align-items: center;
+}
+
+nav ul{
+	justify-self: flex-end;
+	flex: 0.3;
+}
+
+nav li{
+	display: inline-block;
+	list-style-type: none;
+	margin: 0 10px 0 10px;
+}
+
+nav li a{
+	text-decoration: none;
+	color: #7B1FA2;
+	font-weight: bold;
+}
+
+nav li a.selected{
+	border-bottom: 2px solid red;
+	color: red;
+	font-weight: bold;
+	padding-bottom: 3px;
+
+}
+
+nav .logo{
+	justify-self: flex-start;
+	flex: 1;
+	font-weight: bold;
+	font-size: 30px;
+
+}
