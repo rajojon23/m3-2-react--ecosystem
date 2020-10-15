@@ -21,7 +21,6 @@ import ItemDetails from './ItemDetails';
 
 const App = (props) => {
 
-	console.log("inside App component", props);
 
 	let items = props.items; 
 	let sellers = props.sellers; 
@@ -34,7 +33,7 @@ const App = (props) => {
 	  		<Route exact path="/"><Homepage items={props.items}/></Route>
 	  		<Route exact path="/about"><About /></Route>
 	  		{/*add all new routes inside this switch component, it WON'T display the page if 
-	  		it's inside any other component's switch 
+	  		any route inside any other component's switch 
 	  		ALSO: pass the 'component' parameter of Route to the component that will display the item. 
 	  		This way, its prop will get the dynamic ':itemId' from the URL path we need
 			UPDATE: use the 'render' prop of Route to keep the items list that we will use inside the ItemDetails component

@@ -11,8 +11,13 @@ import './ItemDetails.css';
 
 
 const ItemDetails = (props) => {
-	console.log("item details called ", props.match.params);
-	console.log("item details ", props.items);
+
+
+	{/* We will get two different props in here
+		one is from the App component via Route's 'render' property (props.items)
+		another is from the Route's url param itself (props.match.params)
+
+	*/}
 
 	let imgSrc = props.items[props.match.params.itemId].imageSrc;
 	let name = props.items[props.match.params.itemId].name;
@@ -24,8 +29,7 @@ const ItemDetails = (props) => {
 	let sellerName = props.sellers[sellerID].id;
 	let storeName = props.sellers[sellerID].storeName;
 	let sellerPic = props.sellers[sellerID].avatarSrc;
-	let quantity = props.sellers[sellerID].quantity;
-
+	let quantity = props.items[props.match.params.itemId].quantity;
 
 
 	return(
@@ -52,14 +56,14 @@ const ItemDetails = (props) => {
 		</div>
 
 	);
-//	return <p>"itemDetails called"</p>;
+
 
 };
 
 const Button = (props) => {
 	let quantity = props.quantity;
 	let price = props.price;
-	if(quantity<0){
+	if(quantity>0){
 			return(
 				<button className='item_price'>${price} - Buy now</button>
 			

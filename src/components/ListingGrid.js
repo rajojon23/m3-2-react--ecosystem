@@ -16,8 +16,6 @@ import ItemDetails from './ItemDetails';
 
 const ListingGrid = ({ itemList }) => {
 
-	console.log(itemList);
-
 
   return <div  className='fruits_container' >{
 	    itemList.map((item) => {
